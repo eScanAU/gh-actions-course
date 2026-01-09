@@ -2,6 +2,11 @@ name: 08 - Using Variables
 
 on:
   workflow_dispatch:
+    inputs:
+      target:
+        type: environment
+        required: true
+        description: Which environment the workflow will target
 
 env:
   WORKFLOW_VAR: 'I am a workflow env var'
